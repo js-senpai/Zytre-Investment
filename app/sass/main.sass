@@ -1,0 +1,60 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+// Critical css
+::placeholder
+  color: #666
+::selection
+  color: #fff
+input, textarea
+  outline: none
+  &:focus
+    color: #000
+*
+  margin: 0
+  padding: 0
+a,button
+  cursor: pointer
+a
+  text-decoration: none
+  color: #fff
+a:hover
+  color: #fff
+body
+  min-width: 320px
+  max-width: 1980px
+  margin: 0 auto
+  position: relative
+  overflow-x: hidden
+  color: #000
+  background-color: $white
+  @include font('Monserrat',400,16px,1.65)
+// Headers text configs
+h1
+  @include font(['Yeseva One', cursive],800,50px,60px)
+h2
+  @include font(['Monserrat',sans-serif],800,42px,51px)
+h3
+  @include font(['Monserrat',sans-serif],800,26px,51px)
+h4
+  @include font(['Monserrat',sans-serif],700,22px,31px)
+h5
+  @include font(['Monserrat',sans-serif],700,18px,21px)
+// Paragraph configs
+p
+  @include font(['Monserrat',sans-serif],400,18px,26px)
+img
+  max-width: 100%
+  height: auto
+// containers
+.container
+  max-width: 1200px
+  margin: 0 auto
+.grid-container
+  display: grid
+  justify-content: space-between
+
+
+
+@import "media" // Always at the end

@@ -1,0 +1,33 @@
+
+@mixin font($fontNames,$fontWeight,$fontSize,$lineHeight)
+  font-family: $fontNames
+  font-size: $fontSize
+  font-weight: $fontWeight
+  line-height: $lineHeight
+@mixin backgrounds($url,$color)
+  background: url($url) no-repeat $color
+  background-size: cover
+  background-position: center
+@mixin list-type-none
+  list-style-type: none
+@mixin control-text
+  text-overflow: ellipsis
+  overflow: hidden
+@mixin reset-button
+  border: none
+  outline: none
+@mixin section-margin
+  margin: 0 auto
+  padding: 145px 0
+@mixin button($bgcolor,$color)
+  display: block
+  max-width: 293px
+  height: 40px
+  line-height: 40px
+  background-color: $bgcolor
+  text-align: center
+  font-size: 20px
+  color: $color
+  border-radius: 5px
+  font-weight: bold
+  cursor: pointer
