@@ -13,11 +13,11 @@
 <!-- Начало хедера -->
 <header id="header">
 	<div class="header-top container grid-container">
-		<div class="logo"><img src="img/_src/header/logo.svg" alt="logo" ></div>
+		<div class="logo"><a href="#"><img src="img/_src/header/logo.png" alt="logo" ></a></div>
 		<nav class="header-nav">
-			<ul class="header-menu">
+			<ul class="header-menu flex-container">
 				<li class="header-menu__list"><a href="#">О нас</a></li>
-				<li class="header-menu__list"><a href="#">Преимущества</a></li>
+				<li class="header-menu__list active"><a href="#">Преимущества</a></li>
 				<li class="header-menu__list"><a href="#">Видео</a></li>
 				<li class="header-menu__list"><a href="#">Тарифы</a></li>
 				<li class="header-menu__list"><a href="#">С чего начать</a></li>
@@ -26,13 +26,13 @@
 			</ul>
 		</nav>
 	</div>
-	<section class="header-middle">
+	<section class="header-middle container">
 		<h1 class="header-middle__title">Надежные инвестиции</h1>
 		<p class="header-middle__text">Zytre Investment LTD - современная система доверительного управления.
 			Успешные инвесторы выбирают надежные инвестиции!</p>
 		<a href="" class="btn btn-resigtration">Зарегистрироваться</a>
 	</section>
-	<ul class="header-info-list">
+	<ul class="header-info-list container grid-container">
 		<li class="header-info__item">
 			<span class="info-list__stat">
 				<span class="number">5</span> лет
@@ -68,35 +68,41 @@
 	</ul>
 	<div class="read-next">
 		<span class="read-next__text">Листать дальше</span>
-		<a href="#" class="small-btn-btn icofont-wireless-mouse"></a>
+		<a href="#" class="read-next__btn icofont-wireless-mouse"></a>
 	</div>
 	<ul class="header-social">
-		<li class="header-social__item icofont-vk"><a href="#"></a></li>
-		<li class="header-social__item icofont-facebook"><a href="#"></a></li>
-		<li class="header-social__item icofont-youtube"><a href="#"></a></li>
-		<li class="header-social__item icofont-ui-email"><a href="#"></a></li>
+		<li class="header-social__item"><a href="#" class="icofont-vk"></a></li>
+		<li class="header-social__item"><a href="#" class="icofont-facebook"></a></li>
+		<li class="header-social__item"><a href="#" class="icofont-youtube"></a></li>
+		<li class="header-social__item"><a href="#" class="icofont-ui-email"></a></li>
 	</ul>
 </header>
 <!-- Конец хедера -->
 <!-- Начало главного блока -->
 <main id="main">
 <!-- Начало блока "О нас" -->
-	<section class="about-us container grid-container">
-		<div class="about-us-img">
-			<img src="img/icons/loader.gif"
-				 data-src="img/@1x/body/about-us-photo.jpg"
-				 data-srcset="img/@1x/body/about-us-photo.jpg 1x, img/@2x/body/about-us-photo.jpg 2x" class="lazy" alt="about-us"></div>
-		<h3 class="subtitle-color about-us-subtitle">О нас</h3>
-		<h2 class="about-us-title">Кто мы и чем занимаемся?</h2>
-		<p class="about-us-text">
-			ZYTRE - команда молодых, амбициозных единомышленников. Каждый является узкопрофильным профессионалом в своем
-			инвестиционном направлении: трейдинг, альтернативная энергетика, IT-стартапы, технологии искусственного интеллекта, криптовалюта
-			и blockchain.
-			Инвестируя в высокодоходные, перспективные инструменты, извлекаем прибыль как для себя, так и для наших клиентов уже более 3 лет.
-			Вам не нужно "ломать голову" где и как заработать с минимальными рисками. Наша команда сделает это за Вас. Грамотная
-			диверсификация и наличие стабилизационного фонда обеспечивает
-			равномерный % прибыли и надежную сохранность инвестиционного капитала.
-		</p>
+	<section class="about-us">
+		<div class="grid-container container">
+			<div class="about-us-img">
+				<img src="img/icons/loader.gif"
+					 data-src="img/@1x/body/about-us.png"
+					 data-srcset="img/@1x/body/about-us.png 1x, img/@2x/body/about-us.png 2x" class="lazy" alt="about-us">
+			</div>
+			<div class="about-us-info">
+				<h3 class="subtitle-color about-us-subtitle">О нас</h3>
+				<h2 class="about-us-title">Кто мы и чем занимаемся?</h2>
+				<p class="about-us-text">
+					ZYTRE - команда молодых, амбициозных единомышленников. Каждый является узкопрофильным профессионалом в своем
+					инвестиционном направлении: трейдинг, альтернативная энергетика, IT-стартапы, технологии искусственного интеллекта, криптовалюта
+					и blockchain.</p>
+				<p class="about-us-text">
+					Инвестируя в высокодоходные, перспективные инструменты, извлекаем прибыль как для себя, так и для наших клиентов уже более 3 лет.
+					Вам не нужно "ломать голову" где и как заработать с минимальными рисками. Наша команда сделает это за Вас. Грамотная
+					диверсификация и наличие стабилизационного фонда обеспечивает
+					равномерный % прибыли и надежную сохранность инвестиционного капитала.
+				</p>
+			</div>
+		</div>
 	</section>
 <!-- Конец блока "О нас" -->
 <!-- Начало блока "Преимущества" -->
@@ -182,14 +188,23 @@
 	</section>
 <!-- Конец блока "Преимущества" -->
 <!-- Начало блока "Видео" -->
-	<section class="video container">
-		<h3 class="subtitle-color video-subtitle">Видео</h3>
-		<h2 class="video-title">Откуда берется прибыль?</h2>
-		<ul class="video-slider">
-			<li class="video-slider__item"></li>
-			<li class="video-slider__item active"></li>
-			<li class="video-slider__item"></li>
-		</ul>
+	<section class="video">
+		<div class="container">
+			<h3 class="subtitle-color video-subtitle">Видео</h3>
+			<h2 class="video-title">Откуда берется прибыль?</h2>
+			<p class="video-text">Пример того как наши трейдеры зарабатывают для клиентов ZYTRE</p>
+				<ul class="video-slider owl-carousel">
+				<li class="video-slider__item">
+					<div class="youtube" id="TdpBRZ0dZhw"></div>
+				</li>
+				<li class="video-slider__item">
+					<div class="youtube" id="TdpBRZ0dZhw"></div>
+				</li>
+				<li class="video-slider__item">
+					<div class="youtube" id="TdpBRZ0dZhw"></div>
+				</li>
+			</ul>
+		</div>
 	</section>
 <!-- Конец блока "Видео" --->
 <!-- Начало блока "Тарифы" -->
