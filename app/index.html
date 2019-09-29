@@ -16,13 +16,13 @@
 		<div class="logo"><a href="#"><img src="img/_src/header/logo.png" alt="logo" ></a></div>
 		<nav class="header-nav">
 			<ul class="header-menu flex-container">
-				<li class="header-menu__list"><a href="#">О нас</a></li>
-				<li class="header-menu__list active"><a href="#">Преимущества</a></li>
-				<li class="header-menu__list"><a href="#">Видео</a></li>
-				<li class="header-menu__list"><a href="#">Тарифы</a></li>
-				<li class="header-menu__list"><a href="#">С чего начать</a></li>
-				<li class="header-menu__list"><a href="#">Отзывы</a></li>
-				<li class="header-menu__list"><a href="#">Контакты</a></li>
+				<li class="header-menu__list"><a href="#AboutUs">О нас</a></li>
+				<li class="header-menu__list active"><a href="#Advantages">Преимущества</a></li>
+				<li class="header-menu__list"><a href="#Video">Видео</a></li>
+				<li class="header-menu__list"><a href="#Tarify">Тарифы</a></li>
+				<li class="header-menu__list"><a href="#WhereToBegin">С чего начать</a></li>
+				<li class="header-menu__list"><a href="#Rewiews">Отзывы</a></li>
+				<li class="header-menu__list"><a href="#Contacts">Контакты</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -68,7 +68,7 @@
 	</ul>
 	<div class="read-next">
 		<span class="read-next__text">Листать дальше</span>
-		<a href="#" class="read-next__btn icofont-wireless-mouse"></a>
+		<a href="#AboutUs" class="small-color-btn read-next__btn icofont-wireless-mouse"></a>
 	</div>
 	<ul class="header-social">
 		<li class="header-social__item"><a href="#" class="icofont-vk"></a></li>
@@ -89,7 +89,7 @@
 					 data-srcset="img/@1x/body/about-us.png 1x, img/@2x/body/about-us.png 2x" class="lazy" alt="about-us">
 			</div>
 			<div class="about-us-info">
-				<h3 class="subtitle-color about-us-subtitle">О нас</h3>
+				<h3 class="subtitle-color about-us-subtitle" id="AboutUs">О нас</h3>
 				<h2 class="about-us-title">Кто мы и чем занимаемся?</h2>
 				<p class="about-us-text">
 					ZYTRE - команда молодых, амбициозных единомышленников. Каждый является узкопрофильным профессионалом в своем
@@ -108,7 +108,7 @@
 <!-- Начало блока "Преимущества" -->
 	<section class="advantages">
 		<div class="container">
-			<h3 class="subtitle-color advantages-subtitle">Преимущества</h3>
+			<h3 class="subtitle-color advantages-subtitle" id="Advantages">Преимущества</h3>
 			<h2 class="advantages-title">Почему мудрые инвесторы нам доверят?</h2>
 			<ul class="grid-container advantages-list">
 				<li class="grid-container advantages-list__item">
@@ -190,7 +190,7 @@
 <!-- Начало блока "Видео" -->
 	<section class="video">
 		<div class="container">
-			<h3 class="subtitle-color video-subtitle">Видео</h3>
+			<h3 class="subtitle-color video-subtitle" id="Video">Видео</h3>
 			<h2 class="video-title">Откуда берется прибыль?</h2>
 			<p class="video-text">Пример того как наши трейдеры зарабатывают для клиентов ZYTRE</p>
 				<ul class="video-slider owl-carousel">
@@ -208,32 +208,34 @@
 	</section>
 <!-- Конец блока "Видео" --->
 <!-- Начало блока "Тарифы" -->
-	<section class="tarif container">
-		<h3 class="subtitle-color tarif-subtitle">Тарифы</h3>
-		<h2 class="tarif-title">Выгодные тарифы для пасивного заработка</h2>
-		<p class="tarif-text">Наше инвестиционное предложение не оставит равнодушным даже самого опытного инвестора</p>
-		<ul class="grid-container tarif-list">
-			<li class="tarif-list-item">
-				<h4 class="tarif-list-item__title">Криптовалюта</h4>
-				<p class="tarif-list-item__text"><span class="tarif-number">1</span> в день (депозит не включён)</p>
-				<button class="btn-more btn-tarif">Подробнее</button>
-			</li>
-			<li class="tarif-list-item">
-				<h4 class="tarif-list-item__title">Акции, Сырье, Технологии</h4>
-				<p class="tarif-list-item__text"><span class="tarif-number">2-3</span> в день (депозит не включен)</p>
-				<button class="btn-more btn-tarif">Подробнее</button>
-			</li>
-		</ul>
+	<section class="tarif">
+		<div class="container">
+			<h3 class="subtitle-color tarif-subtitle" id="Tarify">Тарифы</h3>
+			<h2 class="tarif-title">Выгодные тарифы для пасивного заработка</h2>
+			<p class="tarif-text">Наше инвестиционное предложение не оставит равнодушным даже самого опытного инвестора</p>
+			<ul class="grid-container tarif-list">
+				<li class="tarif-list-item">
+					<h4 class="tarif-list-item__title">Криптовалюта</h4>
+					<p class="tarif-list-item__text"><span class="tarif-number">1</span> в день (депозит не включён)</p>
+					<button class="btn-more btn-tarif">Подробнее</button>
+				</li>
+				<li class="tarif-list-item">
+					<h4 class="tarif-list-item__title">Акции, Сырье, Технологии</h4>
+					<p class="tarif-list-item__text"><span class="tarif-number">2-3</span> в день (депозит не включен)</p>
+					<button class="btn-more btn-tarif">Подробнее</button>
+				</li>
+			</ul>
+		</div>
 	</section>
 <!-- Конец блока "Тарифы" -->
 <!-- Начало блока "С чего начать?"-->
 	<section class="where-to-begin">
 		<div class="container">
-			<h2 class="subtitle-color where-to-begin-title">С чего начать?</h2>
-			<h3 class="where-to-begin-subtitle">Мы обеспечим надежный доход</h3>
+			<h3 class="subtitle-color where-to-begin-subtitle" id="WhereToBegin">С чего начать?</h3>
+			<h2 class="where-to-begin-title">Мы обеспечим надежный доход</h2>
 			<ul class="grid-container where-to-begin-list">
 				<li class="where-to-begin-list__item">
-					<span class="where-to-begin-number">1</span>
+					<span class="small-color-btn where-to-begin-number">1</span>
 					<div class="where-to-begin-list__img">
 						<img src="img/icons/loader.gif" data-src="img/icons/step-1.png" data-srcset="" class="lazy" alt="step">
 					</div>
@@ -241,7 +243,7 @@
 					<p class="where-to-begin-list__text">Введите свой логин, email, пароль и зарегистрируйтесь</p>
 				</li>
 				<li class="where-to-begin-list__item">
-                    <span class="where-to-begin-number">2</span>
+                    <span class="small-color-btn where-to-begin-number">2</span>
 					<div class="where-to-begin-list__img">
                         <img src="img/icons/loader.gif" data-src="img/icons/step-2.png" data-srcset="" class="lazy" alt="step">
                     </div>
@@ -249,7 +251,7 @@
 					<p class="where-to-begin-list__text">Выберите тариф и создайте депозит</p>
 				</li>
 				<li class="where-to-begin-list__item">
-                    <span class="where-to-begin-number">3</span>
+                    <span class="small-color-btn where-to-begin-number">3</span>
 					<div class="where-to-begin-list__img">
                         <img src="img/icons/loader.gif" data-src="img/icons/step-3.png" data-srcset="" class="lazy" alt="step">
                     </div>
@@ -262,12 +264,14 @@
 <!-- Конец блока "С чего начать?" -->
 <!-- Начало блока "Отзывы" --->
     <section class="rewiews">
-        <h2 class="subtitle-color rewiews-title">Отзывы</h2>
-        <h3 class="rewiews-title">Отзывы от наших уважаемых клиентов</h3>
-        <ul class="rewiews-slider">
+        <div class="container">
+            <h3 class="subtitle-color rewiews-subtitle" id="Rewiews">Отзывы</h3>
+            <h2 class="rewiews-title">Отзывы от наших уважаемых клиентов</h2>
+        </div>
+        <ul class="rewiews-slider owl-carousel">
             <li class="rewiews-slider-item">
                 <div class="rewiews-slider-item__top">
-                    <span class="rewiews-slider-name">bludovc</span>
+                    <span class="rewiews-slider-name subtitle-color">bludovc</span>
                     <time class="rewiews-slider-time">26.09.2019</time>
                 </div>
                 <ul class="rewiews-slider__stars">
@@ -283,7 +287,7 @@
             </li>
             <li class="rewiews-slider-item">
                 <div class="rewiews-slider-item__top">
-                    <span class="rewiews-slider-name">bludovc</span>
+                    <span class="rewiews-slider-name subtitle-color">bludovc</span>
                     <time class="rewiews-slider-time">26.09.2019</time>
                 </div>
                 <ul class="rewiews-slider__stars">
@@ -299,7 +303,7 @@
             </li>
             <li class="rewiews-slider-item">
                 <div class="rewiews-slider-item__top">
-                    <span class="rewiews-slider-name">bludovc</span>
+                    <span class="rewiews-slider-name subtitle-color">bludovc</span>
                     <time class="rewiews-slider-time">26.09.2019</time>
                 </div>
                 <ul class="rewiews-slider__stars">
@@ -315,7 +319,7 @@
             </li>
             <li class="rewiews-slider-item">
                 <div class="rewiews-slider-item__top">
-                    <span class="rewiews-slider-name">bludovc</span>
+                    <span class="rewiews-slider-name subtitle-color">bludovc</span>
                     <time class="rewiews-slider-time">26.09.2019</time>
                 </div>
                 <ul class="rewiews-slider__stars">
@@ -331,7 +335,7 @@
             </li>
             <li class="rewiews-slider-item">
                 <div class="rewiews-slider-item__top">
-                    <span class="rewiews-slider-name">bludovc</span>
+                    <span class="rewiews-slider-name subtitle-color">bludovc</span>
                     <time class="rewiews-slider-time">26.09.2019</time>
                 </div>
                 <ul class="rewiews-slider__stars">
@@ -347,7 +351,7 @@
             </li>
             <li class="rewiews-slider-item">
                 <div class="rewiews-slider-item__top">
-                    <span class="rewiews-slider-name">bludovc</span>
+                    <span class="rewiews-slider-name subtitle-color">bludovc</span>
                     <time class="rewiews-slider-time">26.09.2019</time>
                 </div>
                 <ul class="rewiews-slider__stars">
@@ -363,7 +367,7 @@
             </li>
             <li class="rewiews-slider-item">
                 <div class="rewiews-slider-item__top">
-                    <span class="rewiews-slider-name">bludovc</span>
+                    <span class="rewiews-slider-name subtitle-color">bludovc</span>
                     <time class="rewiews-slider-time">26.09.2019</time>
                 </div>
                 <ul class="rewiews-slider__stars">
@@ -383,9 +387,9 @@
 <!-- Начало блока "Контакты" -->
     <section class="contact">
         <div class="container">
-            <h2 class="contact-title">Хотите зарабатывать без вложений?</h2>
+            <h2 class="contact-title" id="Contacts">Хотите зарабатывать без вложений?</h2>
             <p class="contact-text">Уникальная партнерская и лидерская программы способны в разы увеличить Вашу прибыль: 3 уровня,
-                бонусы от пополнений и прибыли, премии до <strong>250 000$</strong></p>
+                бонусы от пополнений и прибыли, премии до <strong>250 000</strong></p>
             <button class="btn btn-contact">Начать зарабатывать</button>
         </div>
     </section>
@@ -393,44 +397,48 @@
 </main>
 <!-- Конец главного блока -->
 <!-- Начало футера -->
-<footer id="footer" class="container grid-container">
-    <div class="footer-item">
-        <div class="logo">
-            <img src="img/_src/header/logo.svg" class="logo" alt="logo">
+<footer id="footer">
+    <div class="container grid-container">
+        <div class="footer-item">
+            <div class="logo">
+                <img src="img/_src/header/logo.png" class="logo" alt="logo">
+            </div>
+            <p class="copyright">
+                Copyright © 2019. ZYTRE INVESTMENT
+                LTD. All Rights Reserved
+            </p>
+            <a href="#" class="download-sert">
+                <img src="img/icons/sertificate.png" alt="" class="sert-img">
+                <span class="sert-text">Скачать сертификат</span>
+            </a>
         </div>
-        <p class="copyright">
-            Copyright © 2019. ZYTRE INVESTMENT
-            LTD. All Rights Reserved
-        </p>
-        <a href="#" class="download-sert">Скачать сертификат</a>
+        <div class="footer-item">
+            <h4 class="footer-title">Юридическая информация</h4>
+            <p class="footer-adress-text">ZYTRE INVESTMENT LTD
+            <p class="footer-adress-text">Company number <span class="adress-text-mark">11682346</span></p>
+            <p class="footer-adress-text">
+                Адрес: <span class="adress-text-mark">5b Oxford Street, Soho, London, United Kingdom, W1D 2DZ</span>
+            </p>
+            <a href="#" class="btn-footer-more">Проверить в реестре</a>
+        </div>
+        <div class="footer-item">
+            <h4 class="footer-title">Контакты</h4>
+            <a href="mailto:manager@zytre.com" class="footer-mail">manager@zytre.com</a>
+            <a href="mailto:support@zytre.com" class="footer-mail">support@zytre.com</a>
+            <ul class="footer-social">
+                <li class="footer-social__item"><a href="#" class="icofont-vk"></a></li>
+                <li class="footer-social__item"><a href="#" class="icofont-facebook"></a></li>
+                <li class="footer-social__item"><a href="#" class="icofont-youtube"></a></li>
+            </ul>
+        </div>
+        <div class="footer-item">
+            <h4 class="footer-title">Приосединиться к нам</h4>
+            <form action="" class="footer-form">
+                <input type="email" class="footer-form-email" placeholder="Введите email">
+                <input type="submit" class="footer-form-submit btn" value="Приосединиться">
+            </form>
+        </div>
     </div>
-    <div class="footer-item">
-		<h4 class="footer-title">Юридическая информация</h4>
-		<p class="footer-adress-text">ZYTRE INVESTMENT LTD
-		<p class="footer-adress-text">Company number <span class="adress-text-mark">11682346</span></p>
-		<p class="footer-adress-text">
-			Адрес: <span class="adress-text-mark">5b Oxford Street, Soho, London, United Kingdom, W1D 2DZ</span>
-		</p>
-		<a href="#" class="btn-footer-more">Проверить в реестре</a>
-	</div>
-	<div class="footer-item">
-		<h4 class="footer-title">Контакты</h4>
-		<a href="#" class="footer-mail"></a>
-		<a href="#" class="footer-mail"></a>
-		<ul class="footer-social">ord Street, Soho, London, United Kingdom, W1D 2DZ</span></p>
-		</p>
-			<li class="footer-social-item icofont-vk"><a href="#"></a></li>
-			<li class="header-social__item icofont-facebook"><a href="#"></a></li>
-			<li class="header-social__item icofont-youtube"><a href="#"></a></li>
-		</ul>
-    </div>
-	<div class="footer-item">
-		<h4 class="footer-title"></h4>
-		<form action="" class="footer-form">
-			<input type="email" class="footer-form-email" placeholder="Введите email">
-			<input type="submit" class="footer-form-submit">																					 class="footer-form-submit">
-		</form>
-	</div>
 </footer>
 <!-- Конец футера -->
 	<script src="js/scripts.min.js"></script>

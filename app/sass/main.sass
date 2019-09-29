@@ -4,23 +4,23 @@
 
 // Critical css
 ::placeholder
-  color: #666
+  color: #7c7c7c
 ::selection
   color: #fff
 input, textarea
   outline: none
   &:focus
-    color: #000
+    color: #7c7c7c
 *
   margin: 0
   padding: 0
+button
+  @include reset-button
 a,button
   cursor: pointer
 a
   text-decoration: none
   color: #fff
-a:hover
-
 body
   min-width: 320px
   max-width: 1980px
@@ -38,7 +38,7 @@ h1
   font-family: 'Yeseva One', cursive
   @include font(400,48px,55px)
   color: #fff
-  letter-spacing: 4.7px;
+  letter-spacing: 4.7px
 h2
   @include font(800,36px,40px)
   margin-bottom: 20px
@@ -46,7 +46,7 @@ h3
   @include font(800,16px,40px)
   letter-spacing: 2px
 h4
-  @include font(700,22px,31px)
+  @include font(700,14px,31px)
 h5
   @include font(700,16px,21px)
 
@@ -70,6 +70,9 @@ img
   line-height: 70px
   text-transform: uppercase
   border-radius: 40px
+  @include control-text
+  background-size: 115% 100%
+  background-position: center
 .btn:hover
   box-shadow: 0 0 5px 5px #07ccfe
 .subtitle-color
@@ -77,6 +80,18 @@ img
   background-clip: text
   color: transparent
   display: inline-block
+.small-color-btn
+  display: block
+  font-size: 14px
+  @include small-btn-color(to right)
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  text-align: center
+  line-height: 40px
+  @include control-text
+.small-color-btn:hover
+  box-shadow: 0 0 4px 4px #11c4fb
 
 //Header
 #header
@@ -97,14 +112,16 @@ img
   text-align: center
   margin-right: 16px
   position: relative
-.header-menu__list.active::before
-  content: ""
-  position: absolute
-  bottom: -11px
-  display: block
-  width: 100%
-  height: 5px
-  background-image: linear-gradient(to right, #a95fa6, #967acb, #7795e6, #4cadf6, #11c4fb)
+  a:hover
+    @include link-hover
+  a:hover::before
+    content: ""
+    position: absolute
+    bottom: -11px
+    display: block
+    width: 100%
+    height: 5px
+    background-image: linear-gradient(to right, #a95fa6, #967acb, #7795e6, #4cadf6, #11c4fb)
 .header-middle
   margin-top: 215px
 .header-middle__text
@@ -162,15 +179,7 @@ img
     margin-right: 25px
   .read-next__btn
     vertical-align: sub
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    background-image: linear-gradient(to right, #a95fa6, #967acb, #7795e6, #4cadf6, #11c4fb)
-    text-align: center
-    line-height: 40px
     transform: rotate(-90deg)
-  .read-next__btn:hover
-    box-shadow: 0 0 4px 4px #11c4fb
 // About us
 .about-us
   background-color: $grey
@@ -217,16 +226,28 @@ img
   font-size: 14px
 // Video
 .video
-  background-color: $grey
   padding-top: 60px
+  background: url('../img/_src/body/video-container-bg.png') no-repeat $white
+  background-size: 100% 100%
+  padding-bottom: 235px
 .video-slider
   @include list-type-none
   margin-top: 65px
   position: relative
   .owl-dots.disabled
-    display: block
+    display: flex
+    justify-content: center
+    margin-bottom: 20px
+    .owl-dot
+      width: 12px
+      height: 11px
+      background: url('../img/icons/dots.svg') no-repeat
+      background-size: cover
+      margin: 0 15px
+    .owl-dot.active
+      background: url('../img/icons/dots-active.svg') no-repeat
   .owl-stage-outer
-    height: 300px
+    height: 293px
     max-width: 980px
     overflow: hidden
     margin: 0 auto
@@ -266,8 +287,284 @@ img
     height: 100%
     background: url('../img/_src/body/video-bg.png') #000000a8
     cursor: pointer
+    z-index: 1000
   .play:hover
     background: url('../img/_src/body/active-video.png') transparent
 .video-title
   margin-bottom: 15px
+// Tarif
+.tarif-subtitle
+  margin-top: 50px
+.tarif-list
+  grid-template-columns: 457px 457px
+  margin-top: 65px
+  justify-items: center
+  @include list-type-none
+  padding: 0 50px
+.tarif-list-item
+  width: 100%
+  height: 240px
+  background-size: 100%
+  color: #ffffff
+  border-radius: 20px
+  box-shadow: 0 0 15px 1px #000
+.tarif-list-item:first-of-type
+  background: url('../img/_src/body/tarif-1.png') no-repeat
+.tarif-list-item:last-of-type
+  background: url('../img/_src/body/tarif-2.png') no-repeat
+.tarif-list-item__text,.btn-tarif,.tarif-list-item__title
+  margin-left: 48px
+.tarif-list-item__title
+  padding-top: 44px
+  padding-bottom: 4px
+  text-transform: uppercase
+.tarif-list-item__text
+  font-size: 13px
+  @include control-text
+.tarif-number
+  font-weight: 800
+  font-size: 32px
+  position: relative
+.tarif-number::after
+  content: "%"
+  color: #ffffff
+  font-size: 16px
+  padding-left: 5px
+  padding-right: 10px
+  vertical-align: super
+.btn-tarif
+  margin-top: 20px
+  display: block
+  width: 180px
+  height: 38px
+  border-radius: 20px
+  border: 1px solid #fff
+  text-transform: uppercase
+  background: transparent
+  color: #fff
+  font-size: 12px
+.btn-tarif:hover
+  box-shadow: 0 0 10px 2px $white
+// Where to begin
+.where-to-begin
+  background: url('../img/_src/body/step-bg.png') no-repeat transparent
+  background-size: 100% 100%
+.where-to-begin-subtitle
+  margin-top: 335px
+.where-to-begin-title
+  color: $white
+.where-to-begin-list
+  @include list-type-none
+  grid-template-columns: repeat(3,max(300px))
+  margin-top: 80px
+  padding-bottom: 353px
+.where-to-begin-list__item
+  background-color: #fff
+  border-radius: 5px
+  text-align: center
+  position: relative
+  height: 210px
+.where-to-begin-list__img
+  margin-top: 35px
+  margin-bottom: 5px
+.where-to-begin-list__title
+  font-size: 15px
+  text-transform: uppercase
+  @include control-text
+.where-to-begin-list__text
+  font-size: 13px
+  padding: 0 30px
+  @include control-text
+.where-to-begin-number
+  width: 30px
+  height: 30px
+  line-height: 30px
+  color: $white
+  font-weight: bold
+  position: absolute
+  top: -10px
+  left: -10px
+  box-shadow: 0 0 0 10px #1c1c1e
+.where-to-begin-list__item:nth-of-type(2)::before,.where-to-begin-list__item:nth-of-type(2)::after
+  content: ""
+  display: block
+  width: 45px
+  height: 40px
+  background: url('../img/icons/dots-step.png') no-repeat
+  position: absolute
+  top: 100px
+.where-to-begin-list__item:nth-of-type(2)::before
+  right: -80px
+.where-to-begin-list__item:nth-of-type(2)::after
+  left: -80px
+// Rewiews
+.rewiews
+  background-color: $grey
+.rewiews-subtitle
+  padding-top: 70px
+.rewiews-slider
+  @include list-type-none
+  margin-top: 75px
+  .owl-item
+    padding: 10px 0
+  .owl-dots
+    display: flex
+    justify-content: center
+    margin-top: 50px
+    padding-bottom: 130px
+    .owl-dot
+      width: 12px
+      height: 12px
+      background: url('../img/icons/dots.svg') no-repeat
+      background-size: cover
+      margin: 0 15px
+    .owl-dot.active
+      background: url('../img/icons/dots-active.svg') no-repeat
+.rewiews-slider-item
+  width: 300px
+  background-color: #fff
+  border-radius: 15px
+  padding: 40px
+  max-height: 210px
+  box-shadow: 0 0 10px -2px #000
+.rewiews-slider-item__top
+  display: flex
+  justify-content: space-between
+  align-items: center
+.rewiews-slider-name
+  font-weight: 700
+.rewiews-slider-time
+  font-size: 13px
+.rewiews-slider__stars
+  @include list-type-none
+  display: flex
+  justify-content: flex-start
+  padding: 5px 0
+.rewiews-slider__stars-item
+  width: 15px
+  height: 15px
+  background: url('../img/icons/star.svg') no-repeat
+  margin-right: 5px
+  cursor: pointer
+.rewiews-slider-text
+  font-size: 13px
+  margin-top: 10px
+// Контакты
+.contact
+  @include backgrounds('../img/_src/body/contact-bg.jpg',#fff)
+  text-align: center
+  padding-bottom: 150px
+.contact-title
+  padding-top: 142px
+.contact-text
+  font-size: 19px
+  padding: 10px 20px
+  strong
+    font-size: 25px
+    font-weight: 800
+  strong::after
+    content: '$'
+    font-size: 14px
+    vertical-align: super
+.btn-contact
+  margin: 0 auto
+  margin-top: 30px
+// Footer
+#footer
+  background-color: #1a1a1b
+  color: #fff
+  padding: 120px 0
+  .grid-container
+    grid-template-columns: 250px 300px 200px 250px
+  .footer-item:nth-of-type(2)
+    min-width: 300px
+  .copyright
+    font-size: 12px
+    margin-top: 10px
+    padding-right: 10px
+  .download-sert
+    background-image: linear-gradient(to right, #a95fa6, #967acb, #7795e6, #4cadf6, #11c4fb)
+    background-clip: text
+    color: transparent
+    display: flex
+    align-items: flex-start
+    margin-top: 20px
+    font-size: 13px
+    justify-content: flex-start
+    .sert-img,.sert-text
+      display: block
+    .sert-text
+      margin-left: 15px
+      margin-top: 5px
+    .sert-text::after
+      content: ''
+      display: block
+      width: 100%
+      height: 1px
+      background: linear-gradient(to right, #a95fa6, #967acb, #7795e6, #4cadf6, #11c4fb)
+.footer-title
+  text-transform: uppercase
+  padding-top: 14px
+.footer-title::after
+  content: ''
+  display: block
+  width: 55px
+  height: 1px
+  background-image: linear-gradient(to right, #d029d3 50%, #00d2ff 50%)
+  margin-bottom: 10px
+.footer-adress-text
+  font-size: 14px
+  .adress-text-mark
+    font-weight: 700
+.footer-adress-text:first-of-type
+  margin-top: 16px
+.btn-footer-more
+  display: block
+  font-size: 13px
+  font-weight: bold
+  background: url('../img/icons/footer-btn.png') no-repeat
+  background-size: 100%
+  width: 223px
+  height: 40px
+  line-height: 39px
+  text-align: center
+  border-radius: 20px
+  margin-top: 5px
+.btn-footer-more:hover
+  color: #00d2ff
+.footer-mail
+  font-size: 14px
+  font-weight: bold
+.footer-social
+  @include list-type-none
+  display: flex
+  margin-top: 27px
+.footer-social__item
+  font-size: 20px
+  a:hover
+    @include link-hover
+.footer-social__item:first-of-type
+  margin-left: 10px
+.footer-social__item:nth-of-type(2)
+  margin: 0 35px
+.footer-form-email
+  background-color: #1a1a1b
+  border: 1px solid #2c2c2d
+  margin-top: 20px
+  display: block
+  height: 45px
+  width: 250px
+  border-radius: 20px
+  padding-left: 15px
+  font-size: 13px
+  color: #7c7c7c
+.footer-form-email::placeholder
+  color: #7c7c7c
+.footer-form-submit
+  margin-top: 25px
+  @include reset-button
+  width: 200px
+  height: 40px
+  line-height: 40px
+  font-size: 12px
 @import "media" // Always at the end

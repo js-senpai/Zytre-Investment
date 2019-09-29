@@ -11,4 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
         autoplay: true,
         margin: 40
     });
+    $(".rewiews-slider").owlCarousel({
+        items: 3,
+        nav: false,
+        dots: true,
+        loop: true,
+        autoplayHoverPause: true,
+        autoWidth: true,
+        lazyLoad: true,
+        autoplay: true,
+        margin: 30
+    });
 });
